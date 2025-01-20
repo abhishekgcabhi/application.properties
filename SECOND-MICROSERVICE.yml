@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: SECOND-MICROSERVICE
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+server:
+  port: 1113
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
